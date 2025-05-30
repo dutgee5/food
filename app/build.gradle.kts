@@ -3,6 +3,9 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id ("kotlin-kapt")
     id ("dagger.hilt.android.plugin")
+
+    id("androidx.navigation.safeargs.kotlin")
+
 }
 
 android {
@@ -65,7 +68,6 @@ dependencies {
     implementation(libs.converter.gson)
 
     // glide
-
     implementation(libs.glide)
 
 

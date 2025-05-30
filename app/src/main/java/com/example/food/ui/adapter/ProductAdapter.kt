@@ -3,10 +3,12 @@ package com.example.food.ui.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.food.data.entity.Yemekler
 import com.example.food.databinding.ProductsBinding
+import com.example.food.ui.screens.HomeFragmentDirections
 import com.example.food.ui.viewModel.HomeViewModel
 
 class ProductAdapter(
@@ -38,13 +40,17 @@ class ProductAdapter(
         t.textFoodName.text = yemekler.yemek_adi
         t.textFoodPrice.text = yemekler.yemek_fiyat.toString()
 
-
         Glide.with(t.imageFood)
             .load(imageUrl)
             .into(t.imageFood)
 
 
+        t.cardView.setOnClickListener {
+            val detay =HomeFragmentDirections.urunDetayGecis(yemekler=yemekler)
+            Navigation.findNavController(it).navigate(detay)
+        }
+
+        }
     }
 
 
-}

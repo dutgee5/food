@@ -28,7 +28,6 @@ class HomeViewModel @Inject constructor(
     fun yemek(){
         CoroutineScope(Dispatchers.Main).launch{
             liste.value = yemeklerRepository.yemekleriGetirRe()
-            Log.e("liste",liste.value.toString())
         }
     }
 }

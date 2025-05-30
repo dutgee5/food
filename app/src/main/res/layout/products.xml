@@ -1,10 +1,11 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="12dp"
+    android:backgroundTint="@android:color/white"
     android:elevation="6dp"
-    android:radius="16dp"
-    android:backgroundTint="@android:color/white">
+    android:radius="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,18 +18,18 @@
             android:id="@+id/imageFood"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_launcher_background"
             android:background="@drawable/rounded"
-            android:clipToOutline="true" />
+            android:clipToOutline="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
 
         <!-- Ad & Fiyat -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="8dp"
             android:gravity="center_vertical"
+            android:orientation="horizontal"
             android:weightSum="1">
 
             <LinearLayout
@@ -42,9 +43,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Lahmacun"
+                    android:textColor="#000"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#000"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textFoodPrice"
@@ -52,7 +53,7 @@
                     android:layout_height="wrap_content"
                     android:text="₺25"
                     android:textColor="#FF6200EE"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <!-- Sepete Ekle Butonu -->
@@ -61,9 +62,9 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/add"
-                android:src="@drawable/icc_add"
                 android:contentDescription="Sepete Ekle"
-                android:tint="@android:color/white"/>
+                android:src="@drawable/icc_add"
+                android:tint="@android:color/white" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
